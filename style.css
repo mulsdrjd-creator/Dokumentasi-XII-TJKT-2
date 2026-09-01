@@ -215,7 +215,7 @@ ul {
             rgba(111, 85, 67, 0.72),
             rgba(139, 111, 90, 0.72)
         ),
-        url("../css/images/hero.jpg");
+        url("hero.jpg");
 
     background-size: cover;
 
