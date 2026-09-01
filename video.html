@@ -1,0 +1,2153 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Video XII TJKT 2</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS Utama Website -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        /* =====================================================
+           VIDEO PAGE - XII TJKT 2
+           Warna: Coklat Lembut, Krem, Beige, Putih Tisu
+        ===================================================== */
+
+        :root {
+            --video-white: #FFFDF8;
+            --video-cream: #F7F1E8;
+            --video-beige: #EDE1D2;
+            --video-brown: #8B6F5A;
+            --video-light-brown: #A88972;
+            --video-text: #4A3A2E;
+            --video-shadow: 0 10px 30px rgba(74, 58, 46, 0.10);
+            --video-radius: 20px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background: var(--video-white);
+            color: var(--video-text);
+            font-family: "DM Sans", Arial, sans-serif;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        button {
+            font-family: inherit;
+        }
+
+        /* =====================================================
+           NAVBAR
+        ===================================================== */
+
+        .video-page-navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 253, 248, 0.96);
+            border-bottom: 1px solid rgba(139, 111, 90, 0.12);
+            backdrop-filter: blur(12px);
+        }
+
+        .video-nav-container {
+            width: min(1200px, 92%);
+            margin: auto;
+            min-height: 76px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .video-logo {
+            color: var(--video-text);
+            font-size: 1.25rem;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        .video-logo span {
+            color: var(--video-brown);
+        }
+
+        .video-nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .video-nav-menu a {
+            color: var(--video-text);
+            padding: 10px 13px;
+            border-radius: 30px;
+            font-size: 0.92rem;
+            font-weight: 500;
+            transition: 0.3s ease;
+        }
+
+        .video-nav-menu a:hover,
+        .video-nav-menu a.active {
+            background: var(--video-beige);
+            color: var(--video-brown);
+        }
+
+        .video-menu-toggle {
+            display: none;
+            border: none;
+            background: var(--video-beige);
+            color: var(--video-text);
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.1rem;
+        }
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .video-hero {
+            min-height: 620px;
+            padding: 110px 5%;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            background:
+                radial-gradient(circle at 10% 20%, rgba(168, 137, 114, 0.16), transparent 30%),
+                radial-gradient(circle at 90% 80%, rgba(237, 225, 210, 0.8), transparent 35%),
+                var(--video-cream);
+        }
+
+        .video-hero::before {
+            content: "";
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border: 1px solid rgba(139, 111, 90, 0.15);
+            border-radius: 50%;
+            top: -120px;
+            right: -80px;
+        }
+
+        .video-hero-content {
+            width: min(850px, 100%);
+            margin: auto;
+            position: relative;
+            z-index: 2;
+            animation: videoFadeUp 0.8s ease both;
+        }
+
+        .video-hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 9px 18px;
+            border-radius: 50px;
+            background: rgba(255, 253, 248, 0.8);
+            color: var(--video-brown);
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 22px;
+        }
+
+        .video-hero h1 {
+            margin: 0 0 20px;
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: clamp(2.5rem, 6vw, 5rem);
+            line-height: 1.1;
+            color: var(--video-text);
+        }
+
+        .video-hero h1 span {
+            color: var(--video-brown);
+        }
+
+        .video-hero-subtitle {
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: clamp(1.15rem, 2vw, 1.5rem);
+            margin: 0 auto 18px;
+            color: var(--video-light-brown);
+        }
+
+        .video-hero-description {
+            max-width: 700px;
+            margin: 0 auto 35px;
+            line-height: 1.8;
+            color: #6d5b4c;
+        }
+
+        .video-hero-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        .video-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            padding: 14px 25px;
+            border-radius: 50px;
+            border: 1px solid var(--video-brown);
+            cursor: pointer;
+            font-weight: 600;
+            transition: 0.3s ease;
+        }
+
+        .video-btn-primary {
+            background: var(--video-brown);
+            color: white;
+        }
+
+        .video-btn-primary:hover {
+            background: var(--video-light-brown);
+            transform: translateY(-3px);
+        }
+
+        .video-btn-secondary {
+            background: var(--video-white);
+            color: var(--video-brown);
+        }
+
+        .video-btn-secondary:hover {
+            background: var(--video-beige);
+            transform: translateY(-3px);
+        }
+
+        /* =====================================================
+           SECTION UMUM
+        ===================================================== */
+
+        .video-section {
+            width: min(1200px, 92%);
+            margin: auto;
+            padding: 90px 0;
+        }
+
+        .video-section-heading {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 45px;
+        }
+
+        .video-section-heading .label {
+            color: var(--video-brown);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 700;
+        }
+
+        .video-section-heading h2 {
+            margin: 10px 0 15px;
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            color: var(--video-text);
+        }
+
+        .video-section-heading p {
+            line-height: 1.8;
+            color: #756456;
+        }
+
+        /* =====================================================
+           FILTER
+        ===================================================== */
+
+        .video-filter {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 45px;
+        }
+
+        .video-filter button {
+            border: 1px solid var(--video-beige);
+            background: var(--video-white);
+            color: var(--video-text);
+            padding: 11px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: 0.3s ease;
+        }
+
+        .video-filter button:hover,
+        .video-filter button.active {
+            background: var(--video-brown);
+            color: white;
+            border-color: var(--video-brown);
+        }
+
+        /* =====================================================
+           VIDEO GRID
+        ===================================================== */
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .video-card {
+            background: var(--video-white);
+            border: 1px solid rgba(139, 111, 90, 0.12);
+            border-radius: var(--video-radius);
+            overflow: hidden;
+            box-shadow: var(--video-shadow);
+            transition: 0.35s ease;
+        }
+
+        .video-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 18px 40px rgba(74, 58, 46, 0.15);
+        }
+
+        .video-card.hidden {
+            display: none;
+        }
+
+        .video-thumbnail {
+            height: 220px;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            background: var(--video-beige);
+        }
+
+        .video-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .video-card:hover .video-thumbnail img {
+            transform: scale(1.07);
+        }
+
+        .video-thumbnail::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                to top,
+                rgba(40, 30, 22, 0.35),
+                transparent 55%
+            );
+        }
+
+        .video-play-button {
+            position: absolute;
+            z-index: 2;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 65px;
+            height: 65px;
+            border: none;
+            border-radius: 50%;
+            background: rgba(255, 253, 248, 0.94);
+            color: var(--video-brown);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            cursor: pointer;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            transition: 0.3s ease;
+        }
+
+        .video-play-button:hover {
+            transform: translate(-50%, -50%) scale(1.12);
+            background: var(--video-brown);
+            color: white;
+        }
+
+        .video-category {
+            position: absolute;
+            z-index: 3;
+            top: 15px;
+            left: 15px;
+            background: rgba(255, 253, 248, 0.9);
+            color: var(--video-brown);
+            padding: 7px 12px;
+            border-radius: 30px;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+
+        .video-info {
+            padding: 23px;
+        }
+
+        .video-date {
+            color: var(--video-light-brown);
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .video-info h3 {
+            margin: 0 0 10px;
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: 1.3rem;
+            color: var(--video-text);
+        }
+
+        .video-info p {
+            margin: 0 0 20px;
+            line-height: 1.7;
+            font-size: 0.9rem;
+            color: #756456;
+        }
+
+        .video-watch-btn {
+            width: 100%;
+            border: none;
+            background: var(--video-cream);
+            color: var(--video-brown);
+            padding: 12px;
+            border-radius: 12px;
+            cursor: pointer;
+            font-weight: 700;
+            transition: 0.3s ease;
+        }
+
+        .video-watch-btn:hover {
+            background: var(--video-brown);
+            color: white;
+        }
+
+        /* =====================================================
+           VIDEO FEATURED
+        ===================================================== */
+
+        .video-featured {
+            background: var(--video-cream);
+            width: 100%;
+        }
+
+        .video-featured-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .video-featured-card {
+            background: var(--video-white);
+            border-radius: var(--video-radius);
+            overflow: hidden;
+            box-shadow: var(--video-shadow);
+            transition: 0.3s ease;
+        }
+
+        .video-featured-card:hover {
+            transform: translateY(-7px);
+        }
+
+        .video-featured-card .video-thumbnail {
+            height: 280px;
+        }
+
+        .video-featured-content {
+            padding: 22px;
+        }
+
+        .video-featured-content h3 {
+            margin: 0;
+            font-family: "Playfair Display", Georgia, serif;
+        }
+
+        /* =====================================================
+           STATS
+        ===================================================== */
+
+        .video-stats {
+            background: var(--video-white);
+        }
+
+        .video-stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .video-stat-card {
+            text-align: center;
+            padding: 35px 20px;
+            background: var(--video-cream);
+            border-radius: var(--video-radius);
+            border: 1px solid var(--video-beige);
+            transition: 0.3s ease;
+        }
+
+        .video-stat-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .video-stat-card i {
+            color: var(--video-brown);
+            font-size: 1.7rem;
+            margin-bottom: 15px;
+        }
+
+        .video-stat-card strong {
+            display: block;
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: 2.3rem;
+            color: var(--video-brown);
+        }
+
+        .video-stat-card span {
+            color: #756456;
+            font-size: 0.9rem;
+        }
+
+        /* =====================================================
+           QUOTE
+        ===================================================== */
+
+        .video-quote {
+            padding: 100px 20px;
+            text-align: center;
+            background: var(--video-beige);
+        }
+
+        .video-quote i {
+            font-size: 2rem;
+            color: var(--video-brown);
+            margin-bottom: 20px;
+        }
+
+        .video-quote blockquote {
+            max-width: 750px;
+            margin: auto;
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: clamp(1.5rem, 3vw, 2.3rem);
+            line-height: 1.6;
+            color: var(--video-text);
+        }
+
+        .video-quote p {
+            margin-top: 25px;
+            font-weight: 700;
+            color: var(--video-brown);
+        }
+
+        /* =====================================================
+           MODAL VIDEO
+        ===================================================== */
+
+        .video-modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            padding: 25px;
+            background: rgba(45, 35, 28, 0.82);
+            align-items: center;
+            justify-content: center;
+        }
+
+        .video-modal.show {
+            display: flex;
+            animation: videoModalFade 0.3s ease;
+        }
+
+        .video-modal-content {
+            width: min(900px, 100%);
+            max-height: 92vh;
+            overflow-y: auto;
+            position: relative;
+            background: var(--video-white);
+            border-radius: 22px;
+            padding: 20px;
+            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.3);
+            animation: videoModalUp 0.3s ease;
+        }
+
+        .video-modal-close {
+            position: absolute;
+            z-index: 5;
+            top: 12px;
+            right: 12px;
+            width: 42px;
+            height: 42px;
+            border: none;
+            border-radius: 50%;
+            background: var(--video-white);
+            color: var(--video-text);
+            cursor: pointer;
+            font-size: 1.1rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .video-modal-close:hover {
+            background: var(--video-brown);
+            color: white;
+        }
+
+        .video-modal-player {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            overflow: hidden;
+            border-radius: 15px;
+            background: #2e261f;
+        }
+
+        .video-modal-player iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .video-modal-info {
+            padding: 20px 5px 5px;
+        }
+
+        .video-modal-info h2 {
+            margin: 0 0 10px;
+            font-family: "Playfair Display", Georgia, serif;
+            color: var(--video-text);
+        }
+
+        .video-modal-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+
+        .video-modal-meta span {
+            background: var(--video-beige);
+            color: var(--video-brown);
+            padding: 7px 12px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .video-modal-info p {
+            color: #756456;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        .video-footer {
+            background: var(--video-cream);
+            border-top: 1px solid var(--video-beige);
+            padding: 60px 5% 25px;
+        }
+
+        .video-footer-grid {
+            width: min(1200px, 100%);
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            gap: 50px;
+        }
+
+        .video-footer h3 {
+            margin-top: 0;
+            font-family: "Playfair Display", Georgia, serif;
+        }
+
+        .video-footer p {
+            line-height: 1.7;
+            color: #756456;
+        }
+
+        .video-footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .video-footer-links a {
+            color: #756456;
+            transition: 0.3s ease;
+        }
+
+        .video-footer-links a:hover {
+            color: var(--video-brown);
+            padding-left: 5px;
+        }
+
+        .video-social {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .video-social a {
+            width: 42px;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: var(--video-white);
+            color: var(--video-brown);
+            transition: 0.3s ease;
+        }
+
+        .video-social a:hover {
+            background: var(--video-brown);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .video-footer-bottom {
+            width: min(1200px, 100%);
+            margin: 45px auto 0;
+            padding-top: 20px;
+            border-top: 1px solid rgba(139, 111, 90, 0.18);
+            text-align: center;
+            color: #756456;
+            font-size: 0.9rem;
+        }
+
+        /* =====================================================
+           ANIMATION
+        ===================================================== */
+
+        @keyframes videoFadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes videoModalFade {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes videoModalUp {
+            from {
+                opacity: 0;
+                transform: translateY(25px) scale(0.97);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 1000px) {
+            .video-nav-menu {
+                display: none;
+                position: absolute;
+                top: 76px;
+                left: 4%;
+                right: 4%;
+                padding: 15px;
+                flex-direction: column;
+                align-items: stretch;
+                background: var(--video-white);
+                border-radius: 18px;
+                box-shadow: var(--video-shadow);
+            }
+
+            .video-nav-menu.show {
+                display: flex;
+            }
+
+            .video-nav-menu a {
+                display: block;
+                text-align: center;
+            }
+
+            .video-menu-toggle {
+                display: block;
+            }
+
+            .video-grid,
+            .video-featured-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .video-footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 700px) {
+            .video-hero {
+                min-height: 560px;
+                padding: 80px 5%;
+            }
+
+            .video-grid,
+            .video-featured-grid,
+            .video-stats-grid,
+            .video-footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .video-section {
+                padding: 65px 0;
+            }
+
+            .video-thumbnail,
+            .video-featured-card .video-thumbnail {
+                height: 230px;
+            }
+
+            .video-hero-buttons {
+                flex-direction: column;
+            }
+
+            .video-btn {
+                width: 100%;
+            }
+
+            .video-modal {
+                padding: 12px;
+            }
+
+            .video-modal-content {
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
+
+    <header class="video-page-navbar">
+        <div class="video-nav-container">
+
+            <a href="index.html" class="video-logo">
+                <i class="fa-solid fa-network-wired"></i>
+                XII <span>TJKT 2</span>
+            </a>
+
+            <button class="video-menu-toggle" id="videoMenuToggle" aria-label="Buka Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <nav>
+                <ul class="video-nav-menu" id="videoNavMenu">
+                    <li>
+                        <a href="index.html">
+                            <i class="fa-solid fa-house"></i>
+                            Beranda
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="profil.html">
+                            <i class="fa-solid fa-users"></i>
+                            Profil Kelas
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="dokumentasi.html">
+                            <i class="fa-solid fa-camera"></i>
+                            Dokumentasi
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="galeri.html">
+                            <i class="fa-solid fa-images"></i>
+                            Galeri
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="video.html" class="active">
+                            <i class="fa-solid fa-video"></i>
+                            Video
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="projek.html">
+                            <i class="fa-solid fa-code"></i>
+                            Projek
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="kontak.html">
+                            <i class="fa-solid fa-envelope"></i>
+                            Kontak
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
+
+    <section class="video-hero">
+
+        <div class="video-hero-content">
+
+            <div class="video-hero-badge">
+                <i class="fa-solid fa-circle-play"></i>
+                Dokumentasi Video Kelas
+            </div>
+
+            <h1>
+                Video <span>XII TJKT 2</span>
+            </h1>
+
+            <p class="video-hero-subtitle">
+                Setiap Video Mengabadikan Momen, Setiap Momen Menjadi Cerita.
+            </p>
+
+            <p class="video-hero-description">
+                Selamat datang di halaman video XII TJKT 2. Saksikan berbagai video
+                kegiatan kelas, pembelajaran, praktik, projek, kebersamaan, dan
+                momen spesial yang telah kami abadikan bersama.
+            </p>
+
+            <div class="video-hero-buttons">
+                <a href="#video" class="video-btn video-btn-primary">
+                    <i class="fa-solid fa-play"></i>
+                    Lihat Video
+                </a>
+
+                <a href="index.html" class="video-btn video-btn-secondary">
+                    <i class="fa-solid fa-house"></i>
+                    Kembali ke Beranda
+                </a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         VIDEO SECTION
+    ====================================================== -->
+
+    <main>
+
+        <section class="video-section" id="video">
+
+            <div class="video-section-heading">
+                <span class="label">Video Dokumentasi</span>
+
+                <h2>
+                    Video Kegiatan XII TJKT 2
+                </h2>
+
+                <p>
+                    Kumpulan video yang mengabadikan perjalanan, kegiatan,
+                    dan kebersamaan kelas XII TJKT 2.
+                </p>
+            </div>
+
+
+            <!-- FILTER -->
+
+            <div class="video-filter">
+
+                <button class="active" data-filter="all">
+                    Semua
+                </button>
+
+                <button data-filter="Kegiatan Kelas">
+                    Kegiatan Kelas
+                </button>
+
+                <button data-filter="Pembelajaran">
+                    Pembelajaran
+                </button>
+
+                <button data-filter="Praktik">
+                    Praktik
+                </button>
+
+                <button data-filter="Projek">
+                    Projek
+                </button>
+
+                <button data-filter="Kegiatan Sekolah">
+                    Kegiatan Sekolah
+                </button>
+
+                <button data-filter="Kebersamaan">
+                    Kebersamaan
+                </button>
+
+            </div>
+
+
+            <!-- VIDEO GRID -->
+
+            <div class="video-grid">
+
+                <!-- VIDEO 1 -->
+
+                <article class="video-card" data-category="Kegiatan Kelas">
+
+                    <div class="video-thumbnail"
+                         data-video="VIDEO_ID_1"
+                         data-title="Dokumentasi Kegiatan Kelas XII TJKT 2"
+                         data-category="Kegiatan Kelas"
+                         data-date="10 Januari 2026"
+                         data-description="Dokumentasi berbagai kegiatan kelas XII TJKT 2 yang dilakukan bersama selama proses pembelajaran.">
+
+                  <source src="...css/images/video1.mp4" type="video/mp4">
+
+                        <span class="video-category">
+                            Kegiatan Kelas
+                        </span>
+
+                        <button class="video-play-button" aria-label="Putar Video">
+                            <i class="fa-solid fa-play"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="video-info">
+
+                        <div class="video-date">
+                            <i class="fa-regular fa-calendar"></i>
+                            10 Januari 2026
+                        </div>
+
+                        <h3>
+                            Dokumentasi Kegiatan Kelas XII TJKT 2
+                        </h3>
+
+                        <p>
+                            Dokumentasi berbagai kegiatan kelas XII TJKT 2
+                            yang dilakukan bersama.
+                        </p>
+
+                        <button class="video-watch-btn"
+                                data-video="VIDEO_ID_1"
+                                data-title="Dokumentasi Kegiatan Kelas XII TJKT 2"
+                                data-category="Kegiatan Kelas"
+                                data-date="10 Januari 2026"
+                                data-description="Dokumentasi berbagai kegiatan kelas XII TJKT 2 yang dilakukan bersama selama proses pembelajaran.">
+
+                            <i class="fa-solid fa-circle-play"></i>
+                            Tonton Video
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- VIDEO 2 -->
+
+                <article class="video-card" data-category="Pembelajaran">
+
+                    <div class="video-thumbnail"
+                         data-video="VIDEO_ID_2"
+                         data-title="Pembelajaran Jaringan Komputer"
+                         data-category="Pembelajaran"
+                         data-date="15 Januari 2026"
+                         data-description="Kegiatan pembelajaran jaringan komputer yang dilakukan oleh peserta didik XII TJKT 2.">
+
+                        <img src="../css/images/video2.jpeg"
+                             alt="Pembelajaran Jaringan Komputer">
+
+                        <span class="video-category">
+                            Pembelajaran
+                        </span>
+
+                        <button class="video-play-button">
+                            <i class="fa-solid fa-play"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="video-info">
+
+                        <div class="video-date">
+                            <i class="fa-regular fa-calendar"></i>
+                            15 Januari 2026
+                        </div>
+
+                        <h3>
+                            Pembelajaran Jaringan Komputer
+                        </h3>
+
+                        <p>
+                            Kegiatan pembelajaran mengenai jaringan komputer.
+                        </p>
+
+                        <button class="video-watch-btn"
+                                data-video="VIDEO_ID_2"
+                                data-title="Pembelajaran Jaringan Komputer"
+                                data-category="Pembelajaran"
+                                data-date="15 Januari 2026"
+                                data-description="Kegiatan pembelajaran jaringan komputer yang dilakukan oleh peserta didik XII TJKT 2.">
+
+                            <i class="fa-solid fa-circle-play"></i>
+                            Tonton Video
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- VIDEO 3 -->
+
+                <article class="video-card" data-category="Praktik">
+
+                    <div class="video-thumbnail"
+                         data-video="VIDEO_ID_3"
+                         data-title="Praktik Konfigurasi Jaringan"
+                         data-category="Praktik"
+                         data-date="12 Januari 2026"
+                         data-description="Kegiatan praktik konfigurasi jaringan yang dilakukan oleh peserta didik XII TJKT 2.">
+
+                        <img src="../css/images/video3.jpeg"
+                             alt="Praktik Konfigurasi Jaringan">
+
+                        <span class="video-category">
+                            Praktik
+                        </span>
+
+                        <button class="video-play-button">
+                            <i class="fa-solid fa-play"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="video-info">
+
+                        <div class="video-date">
+                            <i class="fa-regular fa-calendar"></i>
+                            12 Januari 2026
+                        </div>
+
+                        <h3>
+                            Praktik Konfigurasi Jaringan
+                        </h3>
+
+                        <p>
+                            Kegiatan praktik konfigurasi jaringan
+                            yang dilakukan di kelas.
+                        </p>
+
+                        <button class="video-watch-btn"
+                                data-video="VIDEO_ID_3"
+                                data-title="Praktik Konfigurasi Jaringan"
+                                data-category="Praktik"
+                                data-date="12 Januari 2026"
+                                data-description="Kegiatan praktik konfigurasi jaringan yang dilakukan oleh peserta didik XII TJKT 2.">
+
+                            <i class="fa-solid fa-circle-play"></i>
+                            Tonton Video
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- VIDEO 4 -->
+
+                <article class="video-card" data-category="Praktik">
+
+                    <div class="video-thumbnail"
+                         data-video="VIDEO_ID_4"
+                         data-title="Praktik Instalasi Sistem Operasi"
+                         data-category="Praktik"
+                         data-date="20 Januari 2026"
+                         data-description="Dokumentasi praktik instalasi sistem operasi sebagai bagian dari pembelajaran TJKT.">
+
+                        <img src="../css/images/video4.jpeg"
+                             alt="Praktik Instalasi Sistem Operasi">
+
+                        <span class="video-category">
+                            Praktik
+                        </span>
+
+                        <button class="video-play-button">
+                            <i class="fa-solid fa-play"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="video-info">
+
+                        <div class="video-date">
+                            <i class="fa-regular fa-calendar"></i>
+                            20 Januari 2026
+                        </div>
+
+                        <h3>
+                            Praktik Instalasi Sistem Operasi
+                        </h3>
+
+                        <p>
+                            Dokumentasi praktik instalasi sistem operasi.
+                        </p>
+
+                        <button class="video-watch-btn"
+                                data-video="VIDEO_ID_4"
+                                data-title="Praktik Instalasi Sistem Operasi"
+                                data-category="Praktik"
+                                data-date="20 Januari 2026"
+                                data-description="Dokumentasi praktik instalasi sistem operasi sebagai bagian dari pembelajaran TJKT.">
+
+                            <i class="fa-solid fa-circle-play"></i>
+                            Tonton Video
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- VIDEO 5 -->
+
+                <article class="video-card" data-category="Projek">
+
+                    <div class="video-thumbnail"
+                         data-video="VIDEO_ID_5"
+                         data-title="Projek Website Kelas"
+                         data-category="Projek"
+                         data-date="5 Februari 2026"
+                         data-description="Dokumentasi proses pembuatan website kelas XII TJKT 2 sebagai projek bersama.">
+
+                        <img src="../css/images/video5.jpeg"
+                             alt="Projek Website Kelas">
+
+                        <span class="video-category">
+                            Projek
+                        </span>
+
+                        <button class="video-play-button">
+                            <i class="fa-solid fa-play"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="video-info">
+
+                        <div class="video-date">
+                            <i class="fa-regular fa-calendar"></i>
+                            5 Februari 2026
+                        </div>
+
+                        <h3>
+                            Projek Website Kelas
+                        </h3>
+
+                        <p>
+                            Dokumentasi proses pembuatan website kelas.
+                        </p>
+
+                        <button class="video-watch-btn"
+                                data-video="VIDEO_ID_5"
+                                data-title="Projek Website Kelas"
+                                data-category="Projek"
+                                data-date="5 Februari 2026"
+                                data-description="Dokumentasi proses pembuatan website kelas XII TJKT 2 sebagai projek bersama.">
+
+                            <i class="fa-solid fa-circle-play"></i>
+                            Tonton Video
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- VIDEO 6 -->
+
+                <article class="video-card" data-category="Kegiatan Sekolah">
+
+                    <div class="video-thumbnail"
+                         data-video="VIDEO_ID_6"
+                         data-title="Kegiatan Sekolah"
+                         data-category="Kegiatan Sekolah"
+                         data-date="15 Februari 2026"
+                         data-description="Dokumentasi kegiatan sekolah yang diikuti oleh peserta didik XII TJKT 2.">
+
+                        <img src="../css/images/video6.jpeg"
+                             alt="Kegiatan Sekolah">
+
+                        <span class="video-category">
+                            Kegiatan Sekolah
+                        </span>
+
+                        <button class="video-play-button">
+                            <i class="fa-solid fa-play"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="video-info">
+
+                        <div class="video-date">
+                            <i class="fa-regular fa-calendar"></i>
+                            15 Februari 2026
+                        </div>
+
+                        <h3>
+                            Kegiatan Sekolah
+                        </h3>
+
+                        <p>
+                            Dokumentasi kegiatan sekolah bersama teman-teman.
+                        </p>
+
+                        <button class="video-watch-btn"
+                                data-video="VIDEO_ID_6"
+                                data-title="Kegiatan Sekolah"
+                                data-category="Kegiatan Sekolah"
+                                data-date="15 Februari 2026"
+                                data-description="Dokumentasi kegiatan sekolah yang diikuti oleh peserta didik XII TJKT 2.">
+
+                            <i class="fa-solid fa-circle-play"></i>
+                            Tonton Video
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- VIDEO 7 -->
+
+                <article class="video-card" data-category="Kebersamaan">
+
+                    <div class="video-thumbnail"
+                         data-video="VIDEO_ID_7"
+                         data-title="Kebersamaan XII TJKT 2"
+                         data-category="Kebersamaan"
+                         data-date="20 Februari 2026"
+                         data-description="Momen kebersamaan dan keseruan peserta didik XII TJKT 2.">
+
+                        <img src="../css/images/video7.jpeg"
+                             alt="Kebersamaan XII TJKT 2">
+
+                        <span class="video-category">
+                            Kebersamaan
+                        </span>
+
+                        <button class="video-play-button">
+                            <i class="fa-solid fa-play"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="video-info">
+
+                        <div class="video-date">
+                            <i class="fa-regular fa-calendar"></i>
+                            20 Februari 2026
+                        </div>
+
+                        <h3>
+                            Kebersamaan XII TJKT 2
+                        </h3>
+
+                        <p>
+                            Momen kebersamaan dan keseruan XII TJKT 2.
+                        </p>
+
+                        <button class="video-watch-btn"
+                                data-video="VIDEO_ID_7"
+                                data-title="Kebersamaan XII TJKT 2"
+                                data-category="Kebersamaan"
+                                data-date="20 Februari 2026"
+                                data-description="Momen kebersamaan dan keseruan peserta didik XII TJKT 2.">
+
+                            <i class="fa-solid fa-circle-play"></i>
+                            Tonton Video
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- VIDEO 8 -->
+
+                <article class="video-card" data-category="Projek">
+
+                    <div class="video-thumbnail"
+                         data-video="VIDEO_ID_8"
+                         data-title="Presentasi Projek Kelas"
+                         data-category="Projek"
+                         data-date="1 Maret 2026"
+                         data-description="Dokumentasi presentasi hasil projek yang telah dibuat oleh peserta didik XII TJKT 2.">
+
+                        <img src="../css/images/video8.jpeg"
+                             alt="Presentasi Projek Kelas">
+
+                        <span class="video-category">
+                            Projek
+                        </span>
+
+                        <button class="video-play-button">
+                            <i class="fa-solid fa-play"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="video-info">
+
+                        <div class="video-date">
+                            <i class="fa-regular fa-calendar"></i>
+                            1 Maret 2026
+                        </div>
+
+                        <h3>
+                            Presentasi Projek Kelas
+                        </h3>
+
+                        <p>
+                            Dokumentasi presentasi hasil projek kelas.
+                        </p>
+
+                        <button class="video-watch-btn"
+                                data-video="VIDEO_ID_8"
+                                data-title="Presentasi Projek Kelas"
+                                data-category="Projek"
+                                data-date="1 Maret 2026"
+                                data-description="Dokumentasi presentasi hasil projek yang telah dibuat oleh peserta didik XII TJKT 2.">
+
+                            <i class="fa-solid fa-circle-play"></i>
+                            Tonton Video
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- VIDEO 9 -->
+
+                <article class="video-card" data-category="Kebersamaan">
+
+                    <div class="video-thumbnail"
+                         data-video="VIDEO_ID_9"
+                         data-title="Momen Spesial XII TJKT 2"
+                         data-category="Kebersamaan"
+                         data-date="10 Maret 2026"
+                         data-description="Kumpulan momen spesial dan kenangan indah bersama keluarga besar XII TJKT 2.">
+
+                        <img src="../css/images/video9.jpeg"
+                             alt="Momen Spesial XII TJKT 2">
+
+                        <span class="video-category">
+                            Kebersamaan
+                        </span>
+
+                        <button class="video-play-button">
+                            <i class="fa-solid fa-play"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="video-info">
+
+                        <div class="video-date">
+                            <i class="fa-regular fa-calendar"></i>
+                            10 Maret 2026
+                        </div>
+
+                        <h3>
+                            Momen Spesial XII TJKT 2
+                        </h3>
+
+                        <p>
+                            Kumpulan momen spesial dan kenangan bersama.
+                        </p>
+
+                        <button class="video-watch-btn"
+                                data-video="VIDEO_ID_9"
+                                data-title="Momen Spesial XII TJKT 2"
+                                data-category="Kebersamaan"
+                                data-date="10 Maret 2026"
+                                data-description="Kumpulan momen spesial dan kenangan indah bersama keluarga besar XII TJKT 2.">
+
+                            <i class="fa-solid fa-circle-play"></i>
+                            Tonton Video
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             VIDEO UNGGULAN
+        ====================================================== -->
+
+        <section class="video-featured">
+
+            <div class="video-section">
+
+                <div class="video-section-heading">
+
+                    <span class="label">
+                        Pilihan Kami
+                    </span>
+
+                    <h2>
+                        Video Pilihan XII TJKT 2
+                    </h2>
+
+                    <p>
+                        Beberapa video pilihan yang merekam momen paling
+                        berkesan dalam perjalanan kelas kami.
+                    </p>
+
+                </div>
+
+
+                <div class="video-featured-grid">
+
+                    <article class="video-featured-card">
+
+                        <div class="video-thumbnail"
+                             data-video="VIDEO_ID_1"
+                             data-title="Perjalanan XII TJKT 2"
+                             data-category="Kegiatan Kelas"
+                             data-date="2026"
+                             data-description="Kumpulan perjalanan dan cerita XII TJKT 2.">
+
+                            <img src="../css/images/video1.jpeg"
+                                 alt="Perjalanan XII TJKT 2">
+
+                            <button class="video-play-button">
+                                <i class="fa-solid fa-play"></i>
+                            </button>
+
+                        </div>
+
+                        <div class="video-featured-content">
+                            <h3>
+                                Perjalanan XII TJKT 2
+                            </h3>
+                        </div>
+
+                    </article>
+
+
+                    <article class="video-featured-card">
+
+                        <div class="video-thumbnail"
+                             data-video="VIDEO_ID_3"
+                             data-title="Kegiatan Praktik dan Pembelajaran"
+                             data-category="Praktik"
+                             data-date="2026"
+                             data-description="Kegiatan praktik dan pembelajaran XII TJKT 2.">
+
+                            <img src="../css/images/video3.jpeg"
+                                 alt="Kegiatan Praktik dan Pembelajaran">
+
+                            <button class="video-play-button">
+                                <i class="fa-solid fa-play"></i>
+                            </button>
+
+                        </div>
+
+                        <div class="video-featured-content">
+                            <h3>
+                                Kegiatan Praktik dan Pembelajaran
+                            </h3>
+                        </div>
+
+                    </article>
+
+
+                    <article class="video-featured-card">
+
+                        <div class="video-thumbnail"
+                             data-video="VIDEO_ID_7"
+                             data-title="Kebersamaan dan Momen Spesial"
+                             data-category="Kebersamaan"
+                             data-date="2026"
+                             data-description="Kumpulan momen kebersamaan dan cerita spesial XII TJKT 2.">
+
+                            <img src="../css/images/video7.jpeg"
+                                 alt="Kebersamaan dan Momen Spesial">
+
+                            <button class="video-play-button">
+                                <i class="fa-solid fa-play"></i>
+                            </button>
+
+                        </div>
+
+                        <div class="video-featured-content">
+                            <h3>
+                                Kebersamaan dan Momen Spesial
+                            </h3>
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             STATISTIK
+        ====================================================== -->
+
+        <section class="video-stats">
+
+            <div class="video-section">
+
+                <div class="video-section-heading">
+
+                    <span class="label">
+                        Perjalanan Kami
+                    </span>
+
+                    <h2>
+                        Statistik Video
+                    </h2>
+
+                </div>
+
+                <div class="video-stats-grid">
+
+                    <div class="video-stat-card">
+                        <i class="fa-solid fa-video"></i>
+                        <strong>20+</strong>
+                        <span>Video Dokumentasi</span>
+                    </div>
+
+                    <div class="video-stat-card">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <strong>10+</strong>
+                        <span>Kegiatan</span>
+                    </div>
+
+                    <div class="video-stat-card">
+                        <i class="fa-solid fa-laptop-code"></i>
+                        <strong>5+</strong>
+                        <span>Projek</span>
+                    </div>
+
+                    <div class="video-stat-card">
+                        <i class="fa-solid fa-users"></i>
+                        <strong>1</strong>
+                        <span>Kelas XII TJKT 2</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             QUOTE
+        ====================================================== -->
+
+        <section class="video-quote">
+
+            <i class="fa-solid fa-quote-left"></i>
+
+            <blockquote>
+                "Video mungkin hanya berdurasi beberapa menit,
+                tetapi setiap detiknya menyimpan kenangan
+                yang akan selalu kami ingat."
+            </blockquote>
+
+            <p>
+                XII TJKT 2 — Satu Kelas, Banyak Cerita.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         VIDEO MODAL
+    ====================================================== -->
+
+    <div class="video-modal" id="videoModal">
+
+        <div class="video-modal-content">
+
+            <button class="video-modal-close" id="videoModalClose">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="video-modal-player">
+
+                <iframe
+                    id="videoIframe"
+                    src=""
+                    title="Video XII TJKT 2"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+
+            </div>
+
+            <div class="video-modal-info">
+
+                <h2 id="modalVideoTitle">
+                    Judul Video
+                </h2>
+
+                <div class="video-modal-meta">
+
+                    <span id="modalVideoCategory">
+                        Kategori
+                    </span>
+
+                    <span id="modalVideoDate">
+                        Tanggal
+                    </span>
+
+                </div>
+
+                <p id="modalVideoDescription">
+                    Deskripsi video.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="video-footer">
+
+        <div class="video-footer-grid">
+
+            <div>
+
+                <h3>
+                    <i class="fa-solid fa-network-wired"></i>
+                    XII TJKT 2
+                </h3>
+
+                <p>
+                    Website resmi kelas XII TJKT 2 untuk berbagi informasi,
+                    dokumentasi, galeri, video, dan projek kelas.
+                </p>
+
+                <div class="video-social">
+
+                    <a href="#" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#" aria-label="YouTube">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+
+                    <a href="#" aria-label="TikTok">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Navigasi
+                </h3>
+
+                <div class="video-footer-links">
+
+                    <a href="index.html">Beranda</a>
+
+                    <a href="profil.html">Profil</a>
+
+                    <a href="dokumentasi.html">Dokumentasi</a>
+
+                    <a href="galeri.html">Galeri</a>
+
+                </div>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Halaman
+                </h3>
+
+                <div class="video-footer-links">
+
+                    <a href="video.html">Video</a>
+
+                    <a href="projek.html">Projek</a>
+
+                    <a href="kontak.html">Kontak</a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="video-footer-bottom">
+
+            <p>
+                © 2026 XII TJKT 2. Semua Hak Dilindungi.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script>
+
+        /* =====================================================
+           MOBILE NAVBAR
+        ====================================================== */
+
+        const videoMenuToggle =
+            document.getElementById("videoMenuToggle");
+
+        const videoNavMenu =
+            document.getElementById("videoNavMenu");
+
+        videoMenuToggle.addEventListener("click", function () {
+
+            videoNavMenu.classList.toggle("show");
+
+            const icon =
+                videoMenuToggle.querySelector("i");
+
+            if (videoNavMenu.classList.contains("show")) {
+
+                icon.classList.remove("fa-bars");
+                icon.classList.add("fa-xmark");
+
+            } else {
+
+                icon.classList.remove("fa-xmark");
+                icon.classList.add("fa-bars");
+
+            }
+
+        });
+
+
+        /* =====================================================
+           FILTER VIDEO
+        ====================================================== */
+
+        const filterButtons =
+            document.querySelectorAll(".video-filter button");
+
+        const videoCards =
+            document.querySelectorAll(".video-card");
+
+        filterButtons.forEach(function (button) {
+
+            button.addEventListener("click", function () {
+
+                filterButtons.forEach(function (btn) {
+                    btn.classList.remove("active");
+                });
+
+                this.classList.add("active");
+
+                const selectedCategory =
+                    this.getAttribute("data-filter");
+
+                videoCards.forEach(function (card) {
+
+                    const cardCategory =
+                        card.getAttribute("data-category");
+
+                    if (
+                        selectedCategory === "all" ||
+                        cardCategory === selectedCategory
+                    ) {
+
+                        card.classList.remove("hidden");
+
+                    } else {
+
+                        card.classList.add("hidden");
+
+                    }
+
+                });
+
+            });
+
+        });
+
+
+        /* =====================================================
+           VIDEO MODAL
+        ====================================================== */
+
+        const videoModal =
+            document.getElementById("videoModal");
+
+        const videoIframe =
+            document.getElementById("videoIframe");
+
+        const videoModalClose =
+            document.getElementById("videoModalClose");
+
+        const modalVideoTitle =
+            document.getElementById("modalVideoTitle");
+
+        const modalVideoCategory =
+            document.getElementById("modalVideoCategory");
+
+        const modalVideoDate =
+            document.getElementById("modalVideoDate");
+
+        const modalVideoDescription =
+            document.getElementById("modalVideoDescription");
+
+
+        function openVideoModal(element) {
+
+            const videoId =
+                element.getAttribute("data-video");
+
+            const title =
+                element.getAttribute("data-title");
+
+            const category =
+                element.getAttribute("data-category");
+
+            const date =
+                element.getAttribute("data-date");
+
+            const description =
+                element.getAttribute("data-description");
+
+
+            /*
+             * GANTI VIDEO_ID_1, VIDEO_ID_2, dst
+             * DENGAN ID VIDEO YOUTUBE ASLI.
+             *
+             * Contoh:
+             * https://www.youtube.com/watch?v=ABC123
+             *
+             * Maka:
+             * data-video="ABC123"
+             */
+
+            videoIframe.src =
+                "https://www.youtube.com/embed/" +
+                videoId +
+                "?autoplay=1";
+
+
+            modalVideoTitle.textContent = title;
+
+            modalVideoCategory.textContent = category;
+
+            modalVideoDate.textContent = date;
+
+            modalVideoDescription.textContent = description;
+
+
+            videoModal.classList.add("show");
+
+            document.body.style.overflow = "hidden";
+
+        }
+
+
+        function closeVideoModal() {
+
+            videoModal.classList.remove("show");
+
+            /*
+             * Mengosongkan src agar video berhenti
+             * ketika modal ditutup.
+             */
+
+            videoIframe.src = "";
+
+            document.body.style.overflow = "";
+
+        }
+
+
+        /*
+         * Klik thumbnail
+         */
+
+        document.querySelectorAll(".video-thumbnail")
+            .forEach(function (thumbnail) {
+
+                thumbnail.addEventListener("click", function () {
+
+                    openVideoModal(this);
+
+                });
+
+            });
+
+
+        /*
+         * Klik tombol Tonton Video
+         */
+
+        document.querySelectorAll(".video-watch-btn")
+            .forEach(function (button) {
+
+                button.addEventListener("click", function () {
+
+                    openVideoModal(this);
+
+                });
+
+            });
+
+
+        /*
+         * Tombol X
+         */
+
+        videoModalClose.addEventListener(
+            "click",
+            closeVideoModal
+        );
+
+
+        /*
+         * Klik area luar modal
+         */
+
+        videoModal.addEventListener("click", function (event) {
+
+            if (event.target === videoModal) {
+
+                closeVideoModal();
+
+            }
+
+        });
+
+
+        /*
+         * Tombol Escape
+         */
+
+        document.addEventListener("keydown", function (event) {
+
+            if (
+                event.key === "Escape" &&
+                videoModal.classList.contains("show")
+            ) {
+
+                closeVideoModal();
+
+            }
+
+        });
+
+    </script>
+
+</body>
+</html>

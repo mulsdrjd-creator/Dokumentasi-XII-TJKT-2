@@ -1,0 +1,2180 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Projek | XII TJKT 2</title>
+
+    <!-- CSS UTAMA -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        /* =====================================================
+           CSS KHUSUS HALAMAN PROJEK
+        ===================================================== */
+
+        :root {
+            --putih-tisu: #FFFDF8;
+            --krem: #F7F1E8;
+            --beige: #EDE1D2;
+            --coklat-lembut: #8B6F5A;
+            --coklat-muda: #A88972;
+            --coklat-teks: #4A3A2E;
+            --abu-teks: #766557;
+            --putih: #FFFFFF;
+            --shadow: 0 15px 40px rgba(74, 58, 46, 0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background: var(--putih-tisu);
+            color: var(--coklat-teks);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .project-hero {
+            min-height: 78vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 120px 20px 80px;
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--krem),
+                    var(--putih-tisu)
+                );
+        }
+
+        .project-hero-content {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .project-hero-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 20px;
+            border-radius: 50px;
+            background: var(--beige);
+            color: var(--coklat-lembut);
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 25px;
+        }
+
+        .project-hero h1 {
+            margin: 0 0 20px;
+            font-size: clamp(2.5rem, 6vw, 5rem);
+            line-height: 1.1;
+            color: var(--coklat-teks);
+        }
+
+        .project-hero h1 span {
+            color: var(--coklat-lembut);
+        }
+
+        .project-hero h2 {
+            margin: 0 auto 20px;
+            max-width: 750px;
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            font-weight: 500;
+            line-height: 1.5;
+        }
+
+        .project-hero p {
+            max-width: 750px;
+            margin: 0 auto 30px;
+            color: var(--abu-teks);
+            line-height: 1.8;
+        }
+
+        .project-hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .project-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 14px 26px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s ease;
+        }
+
+        .project-btn-primary {
+            background: var(--coklat-lembut);
+            color: var(--putih);
+        }
+
+        .project-btn-primary:hover {
+            background: var(--coklat-muda);
+            transform: translateY(-3px);
+        }
+
+        .project-btn-secondary {
+            background: var(--beige);
+            color: var(--coklat-teks);
+        }
+
+        .project-btn-secondary:hover {
+            background: #e2d1bd;
+            transform: translateY(-3px);
+        }
+
+        /* =====================================================
+           SECTION TITLE
+        ===================================================== */
+
+        .project-section-title {
+            max-width: 750px;
+            margin: 0 auto 50px;
+            text-align: center;
+        }
+
+        .project-section-title span {
+            color: var(--coklat-lembut);
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .project-section-title h2 {
+            margin: 12px 0;
+            font-size: clamp(2rem, 4vw, 3rem);
+            color: var(--coklat-teks);
+        }
+
+        .project-section-title p {
+            margin: 0;
+            color: var(--abu-teks);
+            line-height: 1.7;
+        }
+
+        /* =====================================================
+           STATISTIK
+        ===================================================== */
+
+        .project-stats {
+            padding: 70px 20px;
+            background: var(--putih-tisu);
+        }
+
+        .project-stats-grid {
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .project-stat-card {
+            padding: 30px 20px;
+            text-align: center;
+            background: var(--krem);
+            border: 1px solid rgba(139, 111, 90, 0.12);
+            border-radius: 22px;
+            box-shadow: var(--shadow);
+            transition: 0.3s ease;
+        }
+
+        .project-stat-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .project-stat-card i {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 18px;
+            border-radius: 50%;
+            background: var(--beige);
+            color: var(--coklat-lembut);
+            font-size: 24px;
+        }
+
+        .project-stat-card h3 {
+            margin: 0;
+            font-size: 2rem;
+            color: var(--coklat-lembut);
+        }
+
+        .project-stat-card p {
+            margin: 8px 0 0;
+            color: var(--abu-teks);
+        }
+
+        /* =====================================================
+           DAFTAR PROJEK
+        ===================================================== */
+
+        .project-filter-section {
+            padding: 90px 20px;
+            background: var(--krem);
+        }
+
+        .project-filter {
+            max-width: 1000px;
+            margin: 0 auto 45px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .project-filter button {
+            border: none;
+            padding: 11px 20px;
+            border-radius: 30px;
+            background: var(--putih-tisu);
+            color: var(--coklat-teks);
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .project-filter button:hover,
+        .project-filter button.active {
+            background: var(--coklat-lembut);
+            color: var(--putih);
+        }
+
+        .project-grid {
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .project-card {
+            overflow: hidden;
+            border-radius: 25px;
+            background: var(--putih-tisu);
+            box-shadow: var(--shadow);
+            transition: 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 45px rgba(74, 58, 46, 0.14);
+        }
+
+        .project-card.hidden {
+            display: none;
+        }
+
+        .project-card-image {
+            position: relative;
+            height: 220px;
+            overflow: hidden;
+            background: var(--beige);
+        }
+
+        .project-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.5s ease;
+        }
+
+        .project-card:hover .project-card-image img {
+            transform: scale(1.06);
+        }
+
+        .project-category {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            padding: 7px 13px;
+            border-radius: 30px;
+            background: rgba(255, 253, 248, 0.92);
+            color: var(--coklat-lembut);
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .project-card-content {
+            padding: 25px;
+        }
+
+        .project-card-content h3 {
+            margin: 0 0 12px;
+            font-size: 1.25rem;
+            line-height: 1.4;
+        }
+
+        .project-card-content p {
+            min-height: 80px;
+            margin: 0 0 15px;
+            color: var(--abu-teks);
+            line-height: 1.7;
+            font-size: 14px;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+            margin-bottom: 20px;
+        }
+
+        .project-tech span {
+            padding: 6px 10px;
+            border-radius: 20px;
+            background: var(--beige);
+            color: var(--coklat-teks);
+            font-size: 11px;
+            font-weight: bold;
+        }
+
+        .project-detail-btn {
+            width: 100%;
+            border: none;
+            padding: 13px;
+            border-radius: 30px;
+            background: var(--coklat-lembut);
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .project-detail-btn:hover {
+            background: var(--coklat-muda);
+        }
+
+        /* =====================================================
+           MODAL
+        ===================================================== */
+
+        .project-modal {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background: rgba(74, 58, 46, 0.65);
+            backdrop-filter: blur(5px);
+        }
+
+        .project-modal.show {
+            display: flex;
+        }
+
+        .project-modal-content {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            max-height: 90vh;
+            overflow-y: auto;
+            border-radius: 25px;
+            background: var(--putih-tisu);
+            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.2);
+            animation: projectModalShow 0.3s ease;
+        }
+
+        @keyframes projectModalShow {
+            from {
+                opacity: 0;
+                transform: translateY(30px) scale(0.97);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        .project-modal-image {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+        }
+
+        .project-modal-body {
+            padding: 35px;
+        }
+
+        .project-modal-category {
+            display: inline-block;
+            padding: 7px 14px;
+            border-radius: 30px;
+            background: var(--beige);
+            color: var(--coklat-lembut);
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .project-modal-body h2 {
+            margin: 15px 0;
+            font-size: 2rem;
+        }
+
+        .project-modal-body p {
+            color: var(--abu-teks);
+            line-height: 1.8;
+        }
+
+        .project-modal-tech {
+            margin: 20px 0;
+        }
+
+        .project-modal-tech strong {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .project-modal-tech-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .project-modal-tech-list span {
+            padding: 8px 13px;
+            border-radius: 20px;
+            background: var(--krem);
+            font-size: 13px;
+        }
+
+        .project-modal-close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            width: 42px;
+            height: 42px;
+            border: none;
+            border-radius: 50%;
+            background: rgba(255, 253, 248, 0.95);
+            color: var(--coklat-teks);
+            font-size: 18px;
+            cursor: pointer;
+            z-index: 2;
+        }
+
+        .project-modal-close:hover {
+            background: var(--coklat-lembut);
+            color: white;
+        }
+
+        /* =====================================================
+           PROJEK UNGGULAN
+        ===================================================== */
+
+        .project-featured {
+            padding: 90px 20px;
+            background: var(--putih-tisu);
+        }
+
+        .project-featured-grid {
+            max-width: 1150px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .project-featured-card {
+            overflow: hidden;
+            border-radius: 25px;
+            background: var(--krem);
+            box-shadow: var(--shadow);
+            transition: 0.3s ease;
+        }
+
+        .project-featured-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .project-featured-card img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+        }
+
+        .project-featured-content {
+            padding: 25px;
+        }
+
+        .project-featured-content h3 {
+            margin: 0 0 12px;
+        }
+
+        .project-featured-content p {
+            color: var(--abu-teks);
+            line-height: 1.7;
+        }
+
+        .project-featured-content a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 10px;
+            color: var(--coklat-lembut);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* =====================================================
+           PROSES PEMBUATAN
+        ===================================================== */
+
+        .project-process {
+            padding: 90px 20px;
+            background: var(--krem);
+        }
+
+        .project-process-grid {
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 15px;
+        }
+
+        .project-process-card {
+            position: relative;
+            padding: 25px 15px;
+            text-align: center;
+            background: var(--putih-tisu);
+            border-radius: 22px;
+            box-shadow: var(--shadow);
+        }
+
+        .project-process-card i {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            border-radius: 50%;
+            background: var(--beige);
+            color: var(--coklat-lembut);
+            font-size: 23px;
+        }
+
+        .project-process-card h3 {
+            margin: 0 0 10px;
+        }
+
+        .project-process-card p {
+            margin: 0;
+            color: var(--abu-teks);
+            line-height: 1.6;
+            font-size: 13px;
+        }
+
+        /* =====================================================
+           TEKNOLOGI
+        ===================================================== */
+
+        .project-tech-stack {
+            padding: 90px 20px;
+            background: var(--putih-tisu);
+        }
+
+        .project-tech-grid {
+            max-width: 900px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        .project-tech-card {
+            padding: 25px 15px;
+            text-align: center;
+            border-radius: 20px;
+            background: var(--krem);
+            transition: 0.3s ease;
+        }
+
+        .project-tech-card:hover {
+            transform: translateY(-5px);
+            background: var(--beige);
+        }
+
+        .project-tech-card i {
+            display: block;
+            margin-bottom: 12px;
+            font-size: 30px;
+            color: var(--coklat-lembut);
+        }
+
+        .project-tech-card h3 {
+            margin: 0;
+            font-size: 15px;
+        }
+
+        /* =====================================================
+           QUOTE
+        ===================================================== */
+
+        .project-quote {
+            padding: 100px 20px;
+            text-align: center;
+            background: var(--coklat-lembut);
+            color: white;
+        }
+
+        .project-quote-content {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .project-quote i {
+            margin-bottom: 25px;
+            font-size: 35px;
+        }
+
+        .project-quote h2 {
+            margin: 0;
+            font-size: clamp(1.5rem, 3vw, 2.5rem);
+            line-height: 1.6;
+            font-weight: 500;
+        }
+
+        .project-quote p {
+            margin-top: 25px;
+            color: var(--krem);
+            font-weight: bold;
+        }
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 1000px) {
+
+            .project-stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .project-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .project-featured-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .project-process-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .project-tech-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 700px) {
+
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .project-featured-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .project-process-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .project-tech-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .project-modal-image {
+                height: 250px;
+            }
+
+            .project-modal-body {
+                padding: 25px;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            .project-stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .project-process-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .project-tech-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .project-hero-buttons {
+                flex-direction: column;
+            }
+
+            .project-btn {
+                width: 100%;
+            }
+
+            .project-filter {
+                flex-direction: column;
+            }
+
+            .project-filter button {
+                width: 100%;
+            }
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
+
+    <header class="header">
+
+        <nav class="navbar">
+
+            <div class="logo">
+                <i class="fa-solid fa-network-wired"></i>
+                <span>XII TJKT 2</span>
+            </div>
+
+
+            <button class="menu-toggle"
+                id="menuToggle"
+                type="button">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+
+            <ul class="nav-menu"
+                id="navMenu">
+
+                <li>
+                    <a href="index.html">
+                        <i class="fa-solid fa-house"></i>
+                        Beranda
+                    </a>
+                </li>
+
+                <li>
+                    <a href="profil.html">
+                        <i class="fa-solid fa-users"></i>
+                        Profil Kelas
+                    </a>
+                </li>
+
+                <li>
+                    <a href="dokumentasi.html">
+                        <i class="fa-solid fa-camera"></i>
+                        Dokumentasi
+                    </a>
+                </li>
+
+                <li>
+                    <a href="galeri.html">
+                        <i class="fa-solid fa-images"></i>
+                        Galeri
+                    </a>
+                </li>
+
+                <li>
+                    <a href="video.html">
+                        <i class="fa-solid fa-video"></i>
+                        Video
+                    </a>
+                </li>
+
+                <li>
+                    <a href="projek.html"
+                        class="active">
+
+                        <i class="fa-solid fa-code"></i>
+                        Projek
+
+                    </a>
+                </li>
+
+                <li>
+                    <a href="kontak.html">
+                        <i class="fa-solid fa-envelope"></i>
+                        Kontak
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
+
+    <section class="project-hero">
+
+        <div class="project-hero-content">
+
+            <div class="project-hero-label">
+
+                <i class="fa-solid fa-laptop-code"></i>
+
+                PROJEK & KARYA
+
+            </div>
+
+
+            <h1>
+                Projek <span>XII TJKT 2</span>
+            </h1>
+
+
+            <h2>
+                Belajar, Berkarya, dan Menciptakan
+                Solusi Teknologi Bersama.
+            </h2>
+
+
+            <p>
+                Selamat datang di halaman projek XII TJKT 2.
+                Di sini kamu dapat melihat berbagai projek dan
+                karya yang dibuat oleh peserta didik sebagai
+                bentuk kreativitas, pembelajaran, dan penerapan
+                ilmu Teknik Jaringan Komputer dan Telekomunikasi.
+            </p>
+
+
+            <div class="project-hero-buttons">
+
+                <a href="#daftar-projek"
+                    class="project-btn project-btn-primary">
+
+                    <i class="fa-solid fa-folder-open"></i>
+                    Lihat Projek
+
+                </a>
+
+
+                <a href="index.html"
+                    class="project-btn project-btn-secondary">
+
+                    <i class="fa-solid fa-house"></i>
+                    Kembali ke Beranda
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         STATISTIK
+    ====================================================== -->
+
+    <section class="project-stats">
+
+        <div class="project-stats-grid">
+
+
+            <div class="project-stat-card">
+
+                <i class="fa-solid fa-code"></i>
+
+                <h3>10+</h3>
+
+                <p>Projek Selesai</p>
+
+            </div>
+
+
+            <div class="project-stat-card">
+
+                <i class="fa-solid fa-users"></i>
+
+                <h3>30+</h3>
+
+                <p>Peserta Didik</p>
+
+            </div>
+
+
+            <div class="project-stat-card">
+
+                <i class="fa-solid fa-laptop-code"></i>
+
+                <h3>5+</h3>
+
+                <p>Teknologi Digunakan</p>
+
+            </div>
+
+
+            <div class="project-stat-card">
+
+                <i class="fa-solid fa-lightbulb"></i>
+
+                <h3>15+</h3>
+
+                <p>Ide Kreatif</p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         DAFTAR PROJEK
+    ====================================================== -->
+
+    <section class="project-filter-section"
+        id="daftar-projek">
+
+
+        <div class="project-section-title">
+
+            <span>
+                <i class="fa-solid fa-folder-tree"></i>
+                KOLEKSI PROJEK
+            </span>
+
+            <h2>
+                Projek dan Karya Kami
+            </h2>
+
+            <p>
+                Berbagai projek yang telah dibuat dan
+                dikembangkan oleh peserta didik XII TJKT 2.
+            </p>
+
+        </div>
+
+
+        <!-- FILTER -->
+
+        <div class="project-filter">
+
+            <button class="active"
+                data-filter="all">
+
+                Semua
+
+            </button>
+
+            <button data-filter="Website">
+                Website
+            </button>
+
+            <button data-filter="Jaringan">
+                Jaringan
+            </button>
+
+            <button data-filter="Pemrograman">
+                Pemrograman
+            </button>
+
+            <button data-filter="Desain">
+                Desain
+            </button>
+
+            <button data-filter="IoT">
+                IoT
+            </button>
+
+            <button data-filter="Projek Sekolah">
+                Projek Sekolah
+            </button>
+
+        </div>
+
+
+        <!-- GRID PROJEK -->
+
+        <div class="project-grid">
+
+
+            <!-- PROJEK 1 -->
+
+            <article class="project-card"
+                data-category="Website"
+                data-title="Website Profil Kelas XII TJKT 2"
+                data-description="Website profil kelas yang berisi informasi mengenai identitas kelas, anggota kelas, kegiatan, dokumentasi, dan berbagai informasi lainnya."
+                data-tech="HTML, CSS, JavaScript"
+                data-purpose="Menyediakan pusat informasi digital mengenai kelas XII TJKT 2.">
+
+                <div class="project-card-image">
+
+                    <img src="../css/images/projek1.jpeg"
+                        alt="Website Profil Kelas XII TJKT 2">
+
+                    <span class="project-category">
+                        Website
+                    </span>
+
+                </div>
+
+
+                <div class="project-card-content">
+
+                    <h3>
+                    Pembuatan Website Profil Kelas XII TJKT 2
+                    </h3>
+
+                    <p>
+                        Website profil kelas yang berisi informasi
+                        mengenai identitas kelas, anggota kelas,
+                        kegiatan, dokumentasi, dan berbagai
+                        informasi lainnya.
+                    </p>
+
+                    <div class="project-tech">
+
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+
+                    </div>
+
+                    <button class="project-detail-btn">
+                        <i class="fa-solid fa-eye"></i>
+                        Lihat Detail
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- PROJEK 2 -->
+
+            <article class="project-card"
+                data-category="Website"
+                data-title="Website Dokumentasi Kegiatan Kelas"
+                data-description="Website yang digunakan untuk menyimpan dan menampilkan berbagai dokumentasi kegiatan XII TJKT 2."
+                data-tech="HTML, CSS, JavaScript"
+                data-purpose="Mengabadikan dan menyajikan berbagai kegiatan kelas dalam bentuk digital.">
+
+                <div class="project-card-image">
+
+                    <img src="../css/images/projek2.jpg"
+                        alt="Website Dokumentasi Kegiatan Kelas">
+
+                    <span class="project-category">
+                        Website
+                    </span>
+
+                </div>
+
+
+                <div class="project-card-content">
+
+                    <h3>
+                        Website Dokumentasi Kegiatan Kelas
+                    </h3>
+
+                    <p>
+                        Website yang digunakan untuk menyimpan
+                        dan menampilkan berbagai dokumentasi
+                        kegiatan XII TJKT 2.
+                    </p>
+
+                    <div class="project-tech">
+
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+
+                    </div>
+
+                    <button class="project-detail-btn">
+                        <i class="fa-solid fa-eye"></i>
+                        Lihat Detail
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- PROJEK 3 -->
+
+            <article class="project-card"
+                data-category="Jaringan"
+                data-title="Simulasi Jaringan Komputer"
+                data-description="Projek simulasi jaringan komputer untuk memahami konsep dasar jaringan, koneksi perangkat, dan konfigurasi jaringan."
+                data-tech="Cisco Packet Tracer"
+                data-purpose="Memahami konsep dasar jaringan komputer dan konfigurasi perangkat jaringan.">
+
+                <div class="project-card-image">
+
+                    <img src="../css/images/kegiatan2.jpeg"
+                        alt="Simulasi Jaringan Komputer">
+
+                    <span class="project-category">
+                        Jaringan
+                    </span>
+
+                </div>
+
+
+                <div class="project-card-content">
+
+                    <h3>
+                        Simulasi Jaringan Komputer
+                    </h3>
+
+                    <p>
+                        Projek simulasi jaringan komputer untuk
+                        memahami konsep dasar jaringan, koneksi
+                        perangkat, dan konfigurasi jaringan.
+                    </p>
+
+                    <div class="project-tech">
+
+                        <span>Cisco Packet Tracer</span>
+
+                    </div>
+
+                    <button class="project-detail-btn">
+                        <i class="fa-solid fa-eye"></i>
+                        Lihat Detail
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- PROJEK 4 -->
+
+            <article class="project-card"
+                data-category="Pemrograman"
+                data-title="Website Pembelajaran Dasar Pemrograman"
+                data-description="Website edukasi yang berisi materi dasar pemrograman untuk membantu peserta didik memahami konsep coding."
+                data-tech="HTML, CSS, JavaScript"
+                data-purpose="Membantu peserta didik mempelajari dasar-dasar pemrograman secara interaktif.">
+
+                <div class="project-card-image">
+
+                    <img src="../css/images/projek4.png"
+                        alt="Website Pembelajaran Dasar Pemrograman">
+
+                    <span class="project-category">
+                        Pemrograman
+                    </span>
+
+                </div>
+
+
+                <div class="project-card-content">
+
+                    <h3>
+                        Website Pembelajaran Dasar Pemrograman
+                    </h3>
+
+                    <p>
+                        Website edukasi yang berisi materi dasar
+                        pemrograman untuk membantu peserta didik
+                        memahami konsep coding.
+                    </p>
+
+                    <div class="project-tech">
+
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+
+                    </div>
+
+                    <button class="project-detail-btn">
+                        <i class="fa-solid fa-eye"></i>
+                        Lihat Detail
+                    </button>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         MODAL DETAIL
+    ====================================================== -->
+
+    <div class="project-modal"
+        id="projectModal">
+
+        <div class="project-modal-content">
+
+            <button class="project-modal-close"
+                id="projectModalClose"
+                type="button">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+
+            <img id="modalImage"
+                class="project-modal-image"
+                src=""
+                alt="Detail Projek">
+
+
+            <div class="project-modal-body">
+
+                <span class="project-modal-category"
+                    id="modalCategory">
+                </span>
+
+
+                <h2 id="modalTitle">
+                    Detail Projek
+                </h2>
+
+
+                <p id="modalDescription">
+                </p>
+
+
+                <div class="project-modal-tech">
+
+                    <strong>
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                        Teknologi yang Digunakan
+                    </strong>
+
+                    <div class="project-modal-tech-list"
+                        id="modalTech">
+                    </div>
+
+                </div>
+
+
+                <div class="project-modal-purpose">
+
+                    <strong>
+                        <i class="fa-solid fa-bullseye"></i>
+                        Tujuan Projek
+                    </strong>
+
+                    <p id="modalPurpose">
+                    </p>
+
+                </div>
+
+
+                <button
+                    class="project-btn project-btn-primary"
+                    id="modalCloseButton"
+                    type="button">
+
+                    <i class="fa-solid fa-xmark"></i>
+                    Tutup
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         PROJEK UNGGULAN
+    ====================================================== -->
+
+    <section class="project-featured">
+
+        <div class="project-section-title">
+
+            <span>
+                <i class="fa-solid fa-star"></i>
+                PROJEK UNGGULAN
+            </span>
+
+            <h2>
+                Projek Unggulan XII TJKT 2
+            </h2>
+
+            <p>
+                Tiga projek pilihan yang menjadi bagian
+                dari perjalanan dan pengalaman belajar kami.
+            </p>
+
+        </div>
+
+
+        <div class="project-featured-grid">
+
+
+            <div class="project-featured-card">
+
+                <img src="../css/images/projek1.jpeg"
+                    alt="Website Profil Kelas">
+
+                <div class="project-featured-content">
+
+                    <h3>
+                        Website Profil Kelas XII TJKT 2
+                    </h3>
+
+                    <p>
+                        Website yang menjadi pusat informasi
+                        dan identitas digital kelas XII TJKT 2.
+                    </p>
+
+                    <a href="#daftar-projek">
+
+                        Lihat Projek
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="project-featured-card">
+
+                <img src="../css/images/projek2.jpg"
+                    alt="Website Dokumentasi">
+
+                <div class="project-featured-content">
+
+                    <h3>
+                        Website Dokumentasi Kegiatan Kelas
+                    </h3>
+
+                    <p>
+                        Website untuk mengabadikan berbagai
+                        kegiatan dan momen berharga kelas.
+                    </p>
+
+                    <a href="#daftar-projek">
+
+                        Lihat Projek
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         ALUR PEMBUATAN PROJEK
+    ====================================================== -->
+
+    <section class="project-process">
+
+        <div class="project-section-title">
+
+            <span>
+                <i class="fa-solid fa-route"></i>
+                PROSES KREATIF
+            </span>
+
+            <h2>
+                Perjalanan Membuat Projek
+            </h2>
+
+            <p>
+                Setiap projek dimulai dari sebuah ide
+                dan dikembangkan melalui proses yang bertahap.
+            </p>
+
+        </div>
+
+
+        <div class="project-process-grid">
+
+
+            <div class="project-process-card">
+
+                <i class="fa-solid fa-lightbulb"></i>
+
+                <h3>
+                    Ide
+                </h3>
+
+                <p>
+                    Menentukan gagasan dan solusi yang
+                    ingin diwujudkan menjadi sebuah projek.
+                </p>
+
+            </div>
+
+
+            <div class="project-process-card">
+
+                <i class="fa-solid fa-list-check"></i>
+
+                <h3>
+                    Perencanaan
+                </h3>
+
+                <p>
+                    Menyusun rencana, tujuan, kebutuhan,
+                    dan pembagian tugas projek.
+                </p>
+
+            </div>
+
+
+            <div class="project-process-card">
+
+                <i class="fa-solid fa-pen-ruler"></i>
+
+                <h3>
+                    Perancangan
+                </h3>
+
+                <p>
+                    Membuat rancangan tampilan dan
+                    sistem sebelum proses pengembangan.
+                </p>
+
+            </div>
+
+
+            <div class="project-process-card">
+
+                <i class="fa-solid fa-code"></i>
+
+                <h3>
+                    Pengembangan
+                </h3>
+
+                <p>
+                    Mengembangkan ide menjadi projek
+                    yang dapat digunakan dan diuji.
+                </p>
+
+            </div>
+
+
+            <div class="project-process-card">
+
+                <i class="fa-solid fa-chalkboard-user"></i>
+
+                <h3>
+                    Presentasi
+                </h3>
+
+                <p>
+                    Menampilkan hasil projek dan
+                    menjelaskan proses pembuatannya.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         TEKNOLOGI
+    ====================================================== -->
+
+    <section class="project-tech-stack">
+
+        <div class="project-section-title">
+
+            <span>
+                <i class="fa-solid fa-microchip"></i>
+                TEKNOLOGI
+            </span>
+
+            <h2>
+                Teknologi yang Kami Gunakan
+            </h2>
+
+            <p>
+                Berbagai teknologi dan tools yang membantu
+                kami dalam membuat dan mengembangkan projek.
+            </p>
+
+        </div>
+
+
+        <div class="project-tech-grid">
+
+
+            <div class="project-tech-card">
+
+                <i class="fa-brands fa-html5"></i>
+
+                <h3>
+                    HTML
+                </h3>
+
+            </div>
+
+
+            <div class="project-tech-card">
+
+                <i class="fa-brands fa-css3-alt"></i>
+
+                <h3>
+                    CSS
+                </h3>
+
+            </div>
+
+
+            <div class="project-tech-card">
+
+                <i class="fa-brands fa-js"></i>
+
+                <h3>
+                    JavaScript
+                </h3>
+
+            </div>
+
+
+            <div class="project-tech-card">
+
+                <i class="fa-brands fa-figma"></i>
+
+                <h3>
+                    Figma
+                </h3>
+
+            </div>
+
+
+            <div class="project-tech-card">
+
+                <i class="fa-solid fa-network-wired"></i>
+
+                <h3>
+                    Cisco Packet Tracer
+                </h3>
+
+            </div>
+
+
+            <div class="project-tech-card">
+
+                <i class="fa-solid fa-microchip"></i>
+
+                <h3>
+                    Arduino
+                </h3>
+
+            </div>
+
+
+            <div class="project-tech-card">
+
+                <i class="fa-brands fa-git-alt"></i>
+
+                <h3>
+                    Git
+                </h3>
+
+            </div>
+
+
+            <div class="project-tech-card">
+
+                <i class="fa-solid fa-code"></i>
+
+                <h3>
+                    Visual Studio Code
+                </h3>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         QUOTE
+    ====================================================== -->
+
+    <section class="project-quote">
+
+        <div class="project-quote-content">
+
+            <i class="fa-solid fa-quote-left"></i>
+
+            <h2>
+                "Setiap projek adalah perjalanan,
+                setiap kesalahan adalah pembelajaran,
+                dan setiap karya adalah bukti bahwa
+                kita pernah berproses bersama."
+            </h2>
+
+            <p>
+                XII TJKT 2 — Satu Kelas, Banyak Karya.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer-content">
+
+
+                <div class="footer-about">
+
+                    <h3>
+                        <i class="fa-solid fa-network-wired"></i>
+                        XII TJKT 2
+                    </h3>
+
+                    <p>
+                        Website resmi kelas XII TJKT 2 untuk
+                        berbagi informasi, dokumentasi, galeri,
+                        video, projek, dan karya peserta didik.
+                    </p>
+
+                </div>
+
+
+                <div class="footer-links">
+
+                    <h4>
+                        Navigasi
+                    </h4>
+
+                    <a href="index.html">
+                        Beranda
+                    </a>
+
+                    <a href="profil.html">
+                        Profil
+                    </a>
+
+                    <a href="dokumentasi.html">
+                        Dokumentasi
+                    </a>
+
+                    <a href="galeri.html">
+                        Galeri
+                    </a>
+
+                    <a href="video.html">
+                        Video
+                    </a>
+
+                    <a href="projek.html">
+                        Projek
+                    </a>
+
+                    <a href="kontak.html">
+                        Kontak
+                    </a>
+
+                </div>
+
+
+                <div class="footer-social">
+
+                    <h4>
+                        Ikuti Kami
+                    </h4>
+
+                    <div class="social-icons">
+
+                        <a href="#"
+                            aria-label="Instagram">
+
+                            <i class="fa-brands fa-instagram"></i>
+
+                        </a>
+
+                        <a href="#"
+                            aria-label="YouTube">
+
+                            <i class="fa-brands fa-youtube"></i>
+
+                        </a>
+
+                        <a href="#"
+                            aria-label="TikTok">
+
+                            <i class="fa-brands fa-tiktok"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    &copy; 2026 XII TJKT 2.
+                    Semua Hak Dilindungi.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT UTAMA -->
+    <script src="../js/script.js"></script>
+
+
+    <!-- JAVASCRIPT KHUSUS PROJEK -->
+
+    <script>
+
+        /* =====================================================
+           FILTER PROJEK
+        ===================================================== */
+
+        const filterButtons =
+            document.querySelectorAll(
+                ".project-filter button"
+            );
+
+        const projectCards =
+            document.querySelectorAll(
+                ".project-card"
+            );
+
+
+        filterButtons.forEach(function(button) {
+
+            button.addEventListener(
+                "click",
+                function() {
+
+                    filterButtons.forEach(function(btn) {
+
+                        btn.classList.remove(
+                            "active"
+                        );
+
+                    });
+
+
+                    button.classList.add(
+                        "active"
+                    );
+
+
+                    const filter =
+                        button.getAttribute(
+                            "data-filter"
+                        );
+
+
+                    projectCards.forEach(function(card) {
+
+                        const category =
+                            card.getAttribute(
+                                "data-category"
+                            );
+
+
+                        if (
+                            filter === "all" ||
+                            category === filter
+                        ) {
+
+                            card.classList.remove(
+                                "hidden"
+                            );
+
+                        } else {
+
+                            card.classList.add(
+                                "hidden"
+                            );
+
+                        }
+
+                    });
+
+                }
+            );
+
+        });
+
+
+        /* =====================================================
+           MODAL DETAIL PROJEK
+        ===================================================== */
+
+        const projectModal =
+            document.getElementById(
+                "projectModal"
+            );
+
+        const modalClose =
+            document.getElementById(
+                "projectModalClose"
+            );
+
+        const modalCloseButton =
+            document.getElementById(
+                "modalCloseButton"
+            );
+
+        const modalImage =
+            document.getElementById(
+                "modalImage"
+            );
+
+        const modalCategory =
+            document.getElementById(
+                "modalCategory"
+            );
+
+        const modalTitle =
+            document.getElementById(
+                "modalTitle"
+            );
+
+        const modalDescription =
+            document.getElementById(
+                "modalDescription"
+            );
+
+        const modalTech =
+            document.getElementById(
+                "modalTech"
+            );
+
+        const modalPurpose =
+            document.getElementById(
+                "modalPurpose"
+            );
+
+
+        const detailButtons =
+            document.querySelectorAll(
+                ".project-detail-btn"
+            );
+
+
+        detailButtons.forEach(function(button) {
+
+            button.addEventListener(
+                "click",
+                function() {
+
+                    const card =
+                        button.closest(
+                            ".project-card"
+                        );
+
+
+                    const image =
+                        card.querySelector(
+                            ".project-card-image img"
+                        );
+
+
+                    const category =
+                        card.getAttribute(
+                            "data-category"
+                        );
+
+                    const title =
+                        card.getAttribute(
+                            "data-title"
+                        );
+
+                    const description =
+                        card.getAttribute(
+                            "data-description"
+                        );
+
+                    const tech =
+                        card.getAttribute(
+                            "data-tech"
+                        );
+
+                    const purpose =
+                        card.getAttribute(
+                            "data-purpose"
+                        );
+
+
+                    modalImage.src =
+                        image.src;
+
+                    modalImage.alt =
+                        title;
+
+                    modalCategory.textContent =
+                        category;
+
+                    modalTitle.textContent =
+                        title;
+
+                    modalDescription.textContent =
+                        description;
+
+                    modalPurpose.textContent =
+                        purpose;
+
+
+                    modalTech.innerHTML = "";
+
+
+                    tech.split(",").forEach(
+                        function(item) {
+
+                            const span =
+                                document.createElement(
+                                    "span"
+                                );
+
+                            span.textContent =
+                                item.trim();
+
+                            modalTech.appendChild(
+                                span
+                            );
+
+                        }
+                    );
+
+
+                    projectModal.classList.add(
+                        "show"
+                    );
+
+
+                    document.body.style.overflow =
+                        "hidden";
+
+                }
+            );
+
+        });
+
+
+        /* =====================================================
+           FUNGSI TUTUP MODAL
+        ===================================================== */
+
+        function closeProjectModal() {
+
+            projectModal.classList.remove(
+                "show"
+            );
+
+            document.body.style.overflow =
+                "";
+
+        }
+
+
+        modalClose.addEventListener(
+            "click",
+            closeProjectModal
+        );
+
+
+        modalCloseButton.addEventListener(
+            "click",
+            closeProjectModal
+        );
+
+
+        /* =====================================================
+           KLIK DI LUAR MODAL
+        ===================================================== */
+
+        projectModal.addEventListener(
+            "click",
+            function(event) {
+
+                if (
+                    event.target ===
+                    projectModal
+                ) {
+
+                    closeProjectModal();
+
+                }
+
+            }
+        );
+
+
+        /* =====================================================
+           TOMBOL ESCAPE
+        ===================================================== */
+
+        document.addEventListener(
+            "keydown",
+            function(event) {
+
+                if (
+                    event.key === "Escape" &&
+                    projectModal.classList.contains(
+                        "show"
+                    )
+                ) {
+
+                    closeProjectModal();
+
+                }
+
+            }
+        );
+
+
+        /* =====================================================
+           MENU MOBILE
+        ===================================================== */
+
+        const menuToggle =
+            document.getElementById(
+                "menuToggle"
+            );
+
+        const navMenu =
+            document.getElementById(
+                "navMenu"
+            );
+
+
+        if (
+            menuToggle &&
+            navMenu
+        ) {
+
+            menuToggle.addEventListener(
+                "click",
+                function() {
+
+                    navMenu.classList.toggle(
+                        "active"
+                    );
+
+                }
+            );
+
+        }
+
+
+        /* =====================================================
+           TUTUP MENU SETELAH LINK DIKLIK
+        ===================================================== */
+
+        const navLinks =
+            document.querySelectorAll(
+                ".nav-menu a"
+            );
+
+
+        navLinks.forEach(function(link) {
+
+            link.addEventListener(
+                "click",
+                function() {
+
+                    if (navMenu) {
+
+                        navMenu.classList.remove(
+                            "active"
+                        );
+
+                    }
+
+                }
+            );
+
+        });
+
+    </script>
+
+</body>
+
+</html>
